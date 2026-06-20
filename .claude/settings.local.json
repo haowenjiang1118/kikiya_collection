@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm --version)",
+      "Read(//Users/hwmbp/**)",
+      "Read(//Users/hwmbp/.nvm/versions/**)",
+      "Read(//opt/homebrew/bin/**)",
+      "Bash(zsh -lic 'which node; which npm; node --version')",
+      "Read(//Users/hwmbp/.volta/bin/**)",
+      "Bash(/opt/homebrew/bin/brew --version)",
+      "Bash(/opt/homebrew/bin/brew install *)",
+      "Bash(/opt/homebrew/bin/node --version)",
+      "Bash(/opt/homebrew/bin/npm --version)",
+      "Read(//private/tmp/**)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/admin)",
+      "Bash(curl -s -o /dev/null -w \"HTTP %{http_code}\\\\n\" http://localhost:3000/admin/products)",
+      "Bash(curl -s http://localhost:3000/api/products)",
+      "Bash(curl -s -X POST http://localhost:3000/api/products -H \"Content-Type: application/json\" -d '{\"name\":\"Test Hoodie\",\"brand\":\"Tester\",\"category\":\"Tops\",\"priceCents\":3500,\"description\":\"A test item\",\"variants\":[{\"size\":\"L\",\"color\":\"Green\",\"stock\":7}]}' -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/users -H \"Content-Type: application/json\" -d '{\"name\":\"Test Buyer\",\"email\":\"buyer@test.com\",\"role\":\"customer\"}' -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(curl -s -X POST http://localhost:3000/api/products -H \"Content-Type: application/json\" -d '{\"category\":\"Tops\",\"priceCents\":100}' -w \"\\\\nHTTP %{http_code}\\\\n\")",
+      "Bash(curl -s -o /dev/null -w \"storefront /  -> HTTP %{http_code}\\\\n\" http://localhost:3000/)",
+      "Bash(curl -s -o /dev/null -w \"admin /admin -> HTTP %{http_code}\\\\n\" http://localhost:3000/admin)",
+      "Bash(echo \"products in store: $\\(curl -s http://localhost:3000/api/products)",
+      "Bash(curl -s -X DELETE http://localhost:3000/api/products/cmqkm8vje00009k6lmhoe3sn8 -w \" HTTP %{http_code}\\\\n\")",
+      "Bash(echo \"final product count: $\\(curl -s http://localhost:3000/api/products)",
+      "Bash(xargs kill -9)"
+    ]
+  }
+}
